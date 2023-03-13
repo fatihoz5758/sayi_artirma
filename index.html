@@ -54,13 +54,14 @@
             background-color: #1ff8c5;
             color: #1025e0;
             font-weight: bold;
-            
+
         }
-        .btn{
+
+        .btn {
             position: absolute;
             bottom: 40px;
-            
-                        
+
+
         }
     </style>
 </head>
@@ -69,7 +70,7 @@
     <h1>SAYI ARTIRMA</h1>
     <div class="main">
 
-        <input type=button id="sayim" value="50">
+        <p id="sayim"></p>
         <div class="btn">
             <button onclick="arti()"> + Arttır</button>
             <button onclick="eksi()"> - Azalt</button>
@@ -77,27 +78,28 @@
 
     </div>
 
-<script>
+    <script>
+        let number = Math.floor(Math.random() * 100);
+        document.getElementById('sayim').innerHTML = number;
+        function arti() {
+            number++;
+            document.getElementById('sayim').innerHTML = number;
+        }
 
-function arti(){
- 
-var sonuc=document.getElementById("sayim");
-sonuc.value=Number(sonuc.value)+1;
-}
- 
-function eksi(){
- 
-var sonuc=document.getElementById("sayim");
-sonuc.value=Number(sonuc.value)-1;
-}
- 
+        function eksi() {
 
+            number--;
+            document.getElementById('sayim').innerHTML = number;
 
+        }
 
 
 
 
-</script>
+
+
+
+    </script>
 
 
 
